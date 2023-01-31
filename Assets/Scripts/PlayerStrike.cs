@@ -50,22 +50,7 @@ public class PlayerStrike : MonoBehaviour
 
         }
 
-        if (Input.GetButtonUp("Fire1"))
-        {
-            //if (ArmLeft.GetComponent<Animator>().GetBool("stop") == false)
-            //{
-            //    //onanimationEnd();
-            //}
-            //if (ArmRight.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime <= 0)
-            //{
-            //    onanimationEnd();
-            //}
-
-            //if (ArmLeft.GetComponent<Animator>().GetBool("stop"))
-            //{
-            //    onanimationEnd();
-            //} //onanimationEnd();
-        }
+     
            
         
 
@@ -77,4 +62,7 @@ public class PlayerStrike : MonoBehaviour
         ArmRight.SetActive(false);
         ArmLeft.SetActive(false);
     }
+
+
+   
 }
