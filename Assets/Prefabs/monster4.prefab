@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6215549253671431805
 Transform:
   m_ObjectHideFlags: 0
@@ -122,11 +122,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 100
-  damage: 5
+  damage: 0
   Speed: 1.2
   Points: 0
   Lifebar: {fileID: 3664375635111539606}
   playerPosition: {fileID: 0}
+  XP: 0
+  damageByPlayer: 0
 --- !u!50 &7736496485005694379
 Rigidbody2D:
   serializedVersion: 4

@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 4634768490916027002}
   - component: {fileID: 4532501371154872835}
   - component: {fileID: 5413714903039887569}
+  - component: {fileID: 7093394058268734278}
   m_Layer: 0
   m_Name: botle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4634768490916027002
 Transform:
   m_ObjectHideFlags: 0
@@ -106,3 +107,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5209208, y: 4.4272823}
   m_EdgeRadius: 0
+--- !u!114 &7093394058268734278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601212736919929695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b1199cb6d479e4d9a1827f5cab5655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 70
+  XP: 15
+  player: {fileID: 0}
