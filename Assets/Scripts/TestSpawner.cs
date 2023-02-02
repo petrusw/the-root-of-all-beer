@@ -9,14 +9,21 @@ public class TestSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       GameObject obj = Instantiate(gameObjects[0]);
-        obj.transform.position = new Vector3(1, -2, 1);
-        obj.SetActive(true);
+        
+       //GameObject obj = Instantiate(gameObjects[0]);
+       // obj.transform.position = new Vector3(1, -2, 1);
+       // obj.SetActive(true);
+
+        for(var i = 0; i < gameObjects.Count; i++)
+        {
+            spawn(i);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+   private void spawn(int nr)
     {
-        
+        GameObject obj = Instantiate(gameObjects[nr]);
+        obj.transform.position = new Vector3(1, -2, 1);
+        obj.SetActive(true);
     }
 }

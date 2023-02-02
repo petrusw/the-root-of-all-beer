@@ -7,6 +7,10 @@ public class GameLoopScript : MonoBehaviour
 {
     public static GameLoopScript Instance = new GameLoopScript();
 
+
+    public List<GameObject> monsters = new List<GameObject>();
+    public List<GameObject> items = new List<GameObject>();
+    public List<GameObject> Bosses = new List<GameObject>();
     public int HP;
     public int XP;
     public int Items;

@@ -25,13 +25,20 @@ public class PlayerStrike : MonoBehaviour
             {
                 ArmRight.SetActive(true);
                 ArmRight.GetComponent<Animator>().SetTrigger("start");
+                Invoke("endtriggerRight", 0.01f);
+                ArmRight.GetComponent<BoxCollider2D>().enabled = true;
             }
             else
             {
                 ArmLeft.SetActive(true);
                 ArmLeft.GetComponent<Animator>().SetTrigger("start");
+                Invoke("endTriggerLeft", 0.01f);
+                ArmLeft.GetComponent<BoxCollider2D>().enabled = true;
+
             }
         }
+
+       
 
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -40,7 +47,7 @@ public class PlayerStrike : MonoBehaviour
         {
             ArmRight.SetActive(false);
             PlayerSprite.GetComponent<SpriteRenderer>().sprite = defaultSprite;
-
+           
         }
 
         if (horizontal > 0.01f)
@@ -56,6 +63,16 @@ public class PlayerStrike : MonoBehaviour
 
         
     }
+
+    private void endTriggerLeft()
+    {
+        ArmLeft.GetComponent<Animator>().SetTrigger("stop");
+    }
+    private void endtriggerRight()
+    {
+        ArmRight.GetComponent<Animator>().SetTrigger("stop");
+    }
+
     private void onanimationEnd()
     {
         PlayerSprite.GetComponent<SpriteRenderer>().sprite = defaultSprite;

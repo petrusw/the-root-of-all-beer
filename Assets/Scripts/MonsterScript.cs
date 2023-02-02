@@ -15,7 +15,7 @@ public class MonsterScript : MonoBehaviour
 
     private float _life;
 
-
+    private bool direction;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +37,20 @@ public class MonsterScript : MonoBehaviour
         {
             playerPosition.gameObject.GetComponent<PlayerStats>().XP += XP;
             _life -= damageByPlayer;
+            collision.collider.gameObject.GetComponent<Animator>().StopPlayback();
+
+            collision.collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
+            if(direction == false)
+            {
+                transform.position = new Vector3(transform.position.x + 0.5f, transform.position.y, transform.position.z);
+            }
+            else
+            {
+                transform.position = new Vector3(transform.position.x - 0.5f, transform.position.y, transform.position.z);
+            }
+
+
         }
     }
 
@@ -54,10 +68,12 @@ public class MonsterScript : MonoBehaviour
         if(transform.position.x > oldPosition.x)
         {
             this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            direction = true;
         }
         else
         {
             this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            direction = false;
         }
 
 
