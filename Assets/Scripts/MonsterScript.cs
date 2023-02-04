@@ -54,7 +54,10 @@ public class MonsterScript : MonoBehaviour
         }
     }
 
-
+    private void OnDestroy()
+    {
+        GameLoopScript.Instance.enemiesAlive -= 1;
+    }
     // Update is called once per frame
     void Update()
     {
