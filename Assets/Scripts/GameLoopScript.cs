@@ -18,7 +18,7 @@ public class GameLoopScript : MonoBehaviour
     public int enemiesAlive;
     public GameObject Hp, Xp, ITems;
     public bool isEnemiesLaunched;
-    private int sequenceNr;
+    public int sequenceNr;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +47,7 @@ public class GameLoopScript : MonoBehaviour
         HP = 100;
         XP = 0;
         Items = 0;
-        Invoke("gameloop", 5);
+        Invoke("gameloop", 1);
         //Invoke("firstLevel", 1);
     }
     private void Update()
@@ -76,16 +76,12 @@ public class GameLoopScript : MonoBehaviour
     }
     private void gameloop()
     {
-        ShowTextBox("some text here!");
 
         //firstLevel();
         SetSequenceActive();
 
     }
-    private void ShowTextBox(string text)
-    {
-
-    }
+   
 
    
 

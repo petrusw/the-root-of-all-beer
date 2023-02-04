@@ -39,7 +39,7 @@ public class CreateRoomScript : MonoBehaviour
         if (Levelgenerator.RoomNR == 1)
         {
             Player.SetActive(true);
-            Player.transform.position = new Vector3(0, 0, 0);
+            Player.transform.position = new Vector3(0, -0.8f, 0);
             Doors[0].SetActive(true);
 
             

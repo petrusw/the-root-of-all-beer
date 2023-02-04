@@ -14,7 +14,7 @@ public class TestSequence : MonoBehaviour, Isequence
     }
     private void OnEnable()
     {
-        Invoke("firstLevel", 0.1f);
+        Invoke("firstLevel", 0.8f);
     }
     // Update is called once per frame
     void Update()
@@ -39,8 +39,9 @@ public class TestSequence : MonoBehaviour, Isequence
         }
         else
         {
+            GameLoopScript.sequenceNr = 0;
             var obj = Instantiate(gameObjects[0]);
-            obj.SetActive(true);
+            
         }
         GameLoopScript.enemiesAlive += 3;
         GameLoopScript.isEnemiesLaunched = true;
