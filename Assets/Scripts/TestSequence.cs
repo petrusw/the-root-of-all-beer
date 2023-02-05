@@ -8,6 +8,7 @@ public class TestSequence : MonoBehaviour, Isequence
     public List<GameObject> gameObjects;
     public bool HealthObject,textbox;
     public float timeToStart;
+    public Vector2 ninMaxEnemies;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,33 +27,40 @@ public class TestSequence : MonoBehaviour, Isequence
     {
         if (textbox == false)
         {
-            var x = Random.Range(-3, 3);
-            var y = Random.Range(-3, 3);
-            var obj = Instantiate(gameObjects[0], new Vector3(x, y, 0), Quaternion.identity);
-            obj.SetActive(true);
-             x = Random.Range(-3, 3);
-             y = Random.Range(-3, 3);
-            var obj1 = Instantiate(gameObjects[0], new Vector3(x, y, 0), Quaternion.identity);
-            obj1.SetActive(true);
-             x = Random.Range(-3, 3);
-             y = Random.Range(-3, 3);
-            var obj2 = Instantiate(gameObjects[0], new Vector3(x, y, 0), Quaternion.identity);
-            obj2.SetActive(true);
+            float numberOfEnemies = Random.Range(ninMaxEnemies.x, ninMaxEnemies.y);
+            int _numberOfEnemies = (int)numberOfEnemies;
+
+            for (var i = 0; i < _numberOfEnemies; i++)
+            {
+                var x = Random.Range(-3, 3);
+                var y = Random.Range(-3, 3);
+                var obj = Instantiate(gameObjects[0], new Vector3(x, y, 0), Quaternion.identity);
+                obj.SetActive(true);
+            }
+            // x = Random.Range(-3, 3);
+            // y = Random.Range(-3, 3);
+            //var obj1 = Instantiate(gameObjects[0], new Vector3(x, y, 0), Quaternion.identity);
+            //obj1.SetActive(true);
+            // x = Random.Range(-3, 3);
+            // y = Random.Range(-3, 3);
+            //var obj2 = Instantiate(gameObjects[0], new Vector3(x, y, 0), Quaternion.identity);
+            //obj2.SetActive(true);
             if (HealthObject)
             {
-                 x = Random.Range(-3, 3);
-                 y = Random.Range(-3, 3);
+                var x = Random.Range(-3, 3);
+                var  y = Random.Range(-3, 3);
                 var obj3 = Instantiate(gameObjects[1], new Vector3(x, y, 0), Quaternion.identity);
                 obj3.SetActive(true);
             }
+            GameLoopScript.enemiesAlive += _numberOfEnemies;
         }
         else
         {
             GameLoopScript.sequenceNr = 0;
             var obj = Instantiate(gameObjects[0]);
-            
+            GameLoopScript.enemiesAlive += 3;
         }
-        GameLoopScript.enemiesAlive += 3;
+        //GameLoopScript.enemiesAlive += 3;
         GameLoopScript.isEnemiesLaunched = true;
     }
 }

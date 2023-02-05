@@ -30,7 +30,16 @@ public class MonsterScript : MonoBehaviour
         if (collision.collider.gameObject.name == "Player")
         {
             collision.collider.gameObject.GetComponent<PlayerStats>().health -= damage;
-
+            if (direction == false )
+            {
+                if(transform.position.x < 2)
+                transform.position = new Vector3(transform.position.x + 1f, transform.position.y, transform.position.z);
+            }
+            else 
+            {
+                if (transform.position.x > -2)
+                    transform.position = new Vector3(transform.position.x - 1f, transform.position.y, transform.position.z);
+            }
         }
 
         if (collision.collider.gameObject.name == "armLeft" || collision.collider.gameObject.name == "armRight")

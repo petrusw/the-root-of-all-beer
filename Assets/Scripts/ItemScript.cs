@@ -21,10 +21,10 @@ public class ItemScript : MonoBehaviour
 
             collision.collider.gameObject.GetComponent<PlayerStats>().health += health;
 
-            if(collision.collider.gameObject.GetComponent<PlayerStats>().health > 100)
-            {
-                collision.collider.gameObject.GetComponent<PlayerStats>().health = 100;
-            }
+            //if(collision.collider.gameObject.GetComponent<PlayerStats>().health > 100)
+            //{
+            //    collision.collider.gameObject.GetComponent<PlayerStats>().health = 100;
+            //}
 
             this.gameObject.SetActive(false);
         }

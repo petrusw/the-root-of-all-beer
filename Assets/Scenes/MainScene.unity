@@ -553,7 +553,8 @@ MonoBehaviour:
   - {fileID: 4288476881620695900, guid: 1fa3fa8512673cf4d87a48fdfd2e446e, type: 3}
   HealthObject: 0
   textbox: 0
-  timeToStart: 8
+  timeToStart: 0
+  ninMaxEnemies: {x: 2, y: 3}
 --- !u!1 &81580161
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,10 +623,11 @@ MonoBehaviour:
   GameLoopScript: {fileID: 0}
   gameObjects:
   - {fileID: 4946424032374992223, guid: 2af793c6e898728419eb662706aa834c, type: 3}
-  - {fileID: 1601212736919929695, guid: ba32621f6813516439294cf5978177eb, type: 3}
+  - {fileID: 5683440905411893802, guid: e36e0a2baba31dc489d71c3c646a2587, type: 3}
   HealthObject: 1
   textbox: 0
-  timeToStart: 8
+  timeToStart: 1
+  ninMaxEnemies: {x: 3, y: 8}
 --- !u!4 &103356311
 Transform:
   m_ObjectHideFlags: 0
@@ -672,11 +674,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameLoopScript: {fileID: 0}
   gameObjects:
-  - {fileID: 5641277499087069097, guid: 49b647027ef5de145ad92eccb4ba6bd4, type: 3}
+  - {fileID: 4946424032374992223, guid: 2af793c6e898728419eb662706aa834c, type: 3}
   - {fileID: 1601212736919929695, guid: ba32621f6813516439294cf5978177eb, type: 3}
   HealthObject: 1
   textbox: 0
-  timeToStart: 8
+  timeToStart: 1
+  ninMaxEnemies: {x: 3, y: 8}
 --- !u!4 &120797117
 Transform:
   m_ObjectHideFlags: 0
@@ -822,6 +825,7 @@ MonoBehaviour:
   HealthObject: 0
   textbox: 1
   timeToStart: 0
+  ninMaxEnemies: {x: 0, y: 0}
 --- !u!1 &149870546
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,10 +860,10 @@ RectTransform:
   m_Father: {fileID: 1101944200}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 213.2}
-  m_SizeDelta: {x: 160, y: 59.8}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -70.79999}
+  m_SizeDelta: {x: -920, y: 71.79999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &149870548
 MonoBehaviour:
@@ -959,11 +963,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameLoopScript: {fileID: 0}
   gameObjects:
-  - {fileID: 4946424032374992223, guid: 2af793c6e898728419eb662706aa834c, type: 3}
-  - {fileID: 1601212736919929695, guid: ba32621f6813516439294cf5978177eb, type: 3}
+  - {fileID: 6903860888400658962, guid: 90676d25290aa584cbaeea30cce3e20e, type: 3}
+  - {fileID: 5683440905411893802, guid: e36e0a2baba31dc489d71c3c646a2587, type: 3}
   HealthObject: 1
   textbox: 0
-  timeToStart: 8
+  timeToStart: 1
+  ninMaxEnemies: {x: 3, y: 8}
 --- !u!4 &177040511
 Transform:
   m_ObjectHideFlags: 0
@@ -1088,7 +1093,8 @@ MonoBehaviour:
   - {fileID: 1601212736919929695, guid: ba32621f6813516439294cf5978177eb, type: 3}
   HealthObject: 1
   textbox: 0
-  timeToStart: 8
+  timeToStart: 1
+  ninMaxEnemies: {x: 5, y: 25}
 --- !u!4 &235760603
 Transform:
   m_ObjectHideFlags: 0
@@ -1169,10 +1175,10 @@ RectTransform:
   m_Father: {fileID: 1101944200}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 152, y: 198.29999}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 152, y: -85.70001}
+  m_SizeDelta: {x: -920, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &261592580
 MonoBehaviour:
@@ -1502,7 +1508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 389676018}
   - component: {fileID: 389676017}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: StartScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1569,12 +1575,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389676016}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -539.93427, y: -262.45877, z: 0}
-  m_LocalScale: {x: 1.434146, y: 1.3808035, z: 0.9391304}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0.070007324, y: 0.030029297, z: 0}
+  m_LocalScale: {x: 1.5271, y: 1.4703, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 2073491954}
-  m_RootOrder: 1
+  m_Father: {fileID: 931996557}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &399106923
 GameObject:
@@ -2211,10 +2217,11 @@ MonoBehaviour:
   GameLoopScript: {fileID: 0}
   gameObjects:
   - {fileID: 4946424032374992223, guid: 2af793c6e898728419eb662706aa834c, type: 3}
-  - {fileID: 1601212736919929695, guid: ba32621f6813516439294cf5978177eb, type: 3}
+  - {fileID: 4288476881620695900, guid: 1fa3fa8512673cf4d87a48fdfd2e446e, type: 3}
   HealthObject: 1
   textbox: 0
-  timeToStart: 8
+  timeToStart: 0
+  ninMaxEnemies: {x: 2, y: 3}
 --- !u!1 &504144899
 GameObject:
   m_ObjectHideFlags: 0
@@ -2248,10 +2255,10 @@ RectTransform:
   m_Father: {fileID: 2073491954}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.012512, y: -61}
-  m_SizeDelta: {x: 1106, y: 570.7}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.012512207, y: -61}
+  m_SizeDelta: {x: 26, y: 46.700012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &504144901
 MonoBehaviour:
@@ -2911,7 +2918,8 @@ MonoBehaviour:
   - {fileID: 4288476881620695900, guid: 1fa3fa8512673cf4d87a48fdfd2e446e, type: 3}
   HealthObject: 0
   textbox: 0
-  timeToStart: 8
+  timeToStart: 2
+  ninMaxEnemies: {x: 2, y: 4}
 --- !u!4 &695124891
 Transform:
   m_ObjectHideFlags: 0
@@ -3170,7 +3178,8 @@ MonoBehaviour:
   - {fileID: 4288476881620695900, guid: 1fa3fa8512673cf4d87a48fdfd2e446e, type: 3}
   HealthObject: 0
   textbox: 0
-  timeToStart: 8
+  timeToStart: 1
+  ninMaxEnemies: {x: 5, y: 25}
 --- !u!4 &809764853
 Transform:
   m_ObjectHideFlags: 0
@@ -3463,7 +3472,8 @@ MonoBehaviour:
   - {fileID: 1601212736919929695, guid: ba32621f6813516439294cf5978177eb, type: 3}
   HealthObject: 1
   textbox: 0
-  timeToStart: 8
+  timeToStart: 1
+  ninMaxEnemies: {x: 15, y: 30}
 --- !u!4 &918312289
 Transform:
   m_ObjectHideFlags: 0
@@ -3591,6 +3601,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 389676018}
   - {fileID: 2073491954}
   m_Father: {fileID: 1400826531}
   m_RootOrder: 1
@@ -3720,7 +3731,8 @@ MonoBehaviour:
   - {fileID: 1601212736919929695, guid: ba32621f6813516439294cf5978177eb, type: 3}
   HealthObject: 1
   textbox: 0
-  timeToStart: 8
+  timeToStart: 1
+  ninMaxEnemies: {x: 15, y: 30}
 --- !u!4 &951042488
 Transform:
   m_ObjectHideFlags: 0
@@ -3770,10 +3782,10 @@ RectTransform:
   m_Father: {fileID: 1101944200}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -149, y: 198.29999}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -149, y: -85.70001}
+  m_SizeDelta: {x: -920, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &953377117
 MonoBehaviour:
@@ -3938,7 +3950,8 @@ MonoBehaviour:
   - {fileID: 4288476881620695900, guid: 1fa3fa8512673cf4d87a48fdfd2e446e, type: 3}
   HealthObject: 0
   textbox: 0
-  timeToStart: 8
+  timeToStart: 1
+  ninMaxEnemies: {x: 5, y: 25}
 --- !u!4 &987796211
 Transform:
   m_ObjectHideFlags: 0
@@ -4908,7 +4921,8 @@ MonoBehaviour:
   - {fileID: 4288476881620695900, guid: 1fa3fa8512673cf4d87a48fdfd2e446e, type: 3}
   HealthObject: 0
   textbox: 0
-  timeToStart: 8
+  timeToStart: 1
+  ninMaxEnemies: {x: 3, y: 8}
 --- !u!4 &1255520144
 Transform:
   m_ObjectHideFlags: 0
@@ -5174,7 +5188,8 @@ MonoBehaviour:
   - {fileID: 4288476881620695900, guid: 1fa3fa8512673cf4d87a48fdfd2e446e, type: 3}
   HealthObject: 0
   textbox: 0
-  timeToStart: 8
+  timeToStart: 1
+  ninMaxEnemies: {x: 5, y: 10}
 --- !u!4 &1268239139
 Transform:
   m_ObjectHideFlags: 0
@@ -5537,11 +5552,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameLoopScript: {fileID: 0}
   gameObjects:
-  - {fileID: 4946424032374992223, guid: 2af793c6e898728419eb662706aa834c, type: 3}
-  - {fileID: 1601212736919929695, guid: ba32621f6813516439294cf5978177eb, type: 3}
+  - {fileID: 6903860888400658962, guid: 90676d25290aa584cbaeea30cce3e20e, type: 3}
+  - {fileID: 5408177057547062748, guid: 26167fad159f7ad478a87f1333a83cb6, type: 3}
   HealthObject: 1
   textbox: 0
-  timeToStart: 8
+  timeToStart: 2
+  ninMaxEnemies: {x: 2, y: 4}
 --- !u!4 &1323328526
 Transform:
   m_ObjectHideFlags: 0
@@ -5703,7 +5719,8 @@ MonoBehaviour:
   - {fileID: 1601212736919929695, guid: ba32621f6813516439294cf5978177eb, type: 3}
   HealthObject: 1
   textbox: 0
-  timeToStart: 8
+  timeToStart: 1
+  ninMaxEnemies: {x: 5, y: 25}
 --- !u!4 &1340835700
 Transform:
   m_ObjectHideFlags: 0
@@ -5936,10 +5953,11 @@ MonoBehaviour:
   GameLoopScript: {fileID: 0}
   gameObjects:
   - {fileID: 5641277499087069097, guid: 49b647027ef5de145ad92eccb4ba6bd4, type: 3}
-  - {fileID: 1601212736919929695, guid: ba32621f6813516439294cf5978177eb, type: 3}
+  - {fileID: 3196409373976891808, guid: 510fffdc6815cd04b8219da38d0701e6, type: 3}
   HealthObject: 1
   textbox: 0
-  timeToStart: 8
+  timeToStart: 1
+  ninMaxEnemies: {x: 2, y: 4}
 --- !u!4 &1403891949
 Transform:
   m_ObjectHideFlags: 0
@@ -5986,11 +6004,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameLoopScript: {fileID: 0}
   gameObjects:
-  - {fileID: 5641277499087069097, guid: 49b647027ef5de145ad92eccb4ba6bd4, type: 3}
+  - {fileID: 1388140983376149001, guid: f0941d0322cb260438ea2a8bcb86d51b, type: 3}
   - {fileID: 1601212736919929695, guid: ba32621f6813516439294cf5978177eb, type: 3}
   HealthObject: 1
   textbox: 0
-  timeToStart: 8
+  timeToStart: 0
+  ninMaxEnemies: {x: 3, y: 8}
 --- !u!4 &1413865346
 Transform:
   m_ObjectHideFlags: 0
@@ -6189,10 +6208,11 @@ MonoBehaviour:
   GameLoopScript: {fileID: 0}
   gameObjects:
   - {fileID: 5641277499087069097, guid: 49b647027ef5de145ad92eccb4ba6bd4, type: 3}
-  - {fileID: 1601212736919929695, guid: ba32621f6813516439294cf5978177eb, type: 3}
+  - {fileID: 4288476881620695900, guid: 1fa3fa8512673cf4d87a48fdfd2e446e, type: 3}
   HealthObject: 1
   textbox: 0
-  timeToStart: 8
+  timeToStart: 1
+  ninMaxEnemies: {x: 5, y: 10}
 --- !u!4 &1490289976
 Transform:
   m_ObjectHideFlags: 0
@@ -6333,7 +6353,8 @@ MonoBehaviour:
   - {fileID: 4288476881620695900, guid: 1fa3fa8512673cf4d87a48fdfd2e446e, type: 3}
   HealthObject: 0
   textbox: 0
-  timeToStart: 8
+  timeToStart: 1
+  ninMaxEnemies: {x: 15, y: 30}
 --- !u!4 &1505894105
 Transform:
   m_ObjectHideFlags: 0
@@ -6455,10 +6476,11 @@ MonoBehaviour:
   GameLoopScript: {fileID: 0}
   gameObjects:
   - {fileID: 4946424032374992223, guid: 2af793c6e898728419eb662706aa834c, type: 3}
-  - {fileID: 1601212736919929695, guid: ba32621f6813516439294cf5978177eb, type: 3}
+  - {fileID: 5408177057547062748, guid: 26167fad159f7ad478a87f1333a83cb6, type: 3}
   HealthObject: 1
   textbox: 0
-  timeToStart: 8
+  timeToStart: 1
+  ninMaxEnemies: {x: 5, y: 10}
 --- !u!4 &1543250996
 Transform:
   m_ObjectHideFlags: 0
@@ -6609,7 +6631,8 @@ MonoBehaviour:
   - {fileID: 1601212736919929695, guid: ba32621f6813516439294cf5978177eb, type: 3}
   HealthObject: 1
   textbox: 0
-  timeToStart: 8
+  timeToStart: 2
+  ninMaxEnemies: {x: 2, y: 3}
 --- !u!1 &1623590308
 GameObject:
   m_ObjectHideFlags: 0
@@ -7198,7 +7221,8 @@ MonoBehaviour:
   - {fileID: 1601212736919929695, guid: ba32621f6813516439294cf5978177eb, type: 3}
   HealthObject: 1
   textbox: 0
-  timeToStart: 8
+  timeToStart: 1
+  ninMaxEnemies: {x: 5, y: 25}
 --- !u!4 &1847733857
 Transform:
   m_ObjectHideFlags: 0
@@ -7265,6 +7289,7 @@ MonoBehaviour:
   HealthObject: 0
   textbox: 1
   timeToStart: 5
+  ninMaxEnemies: {x: 0, y: 0}
 --- !u!1 &1931288291
 GameObject:
   m_ObjectHideFlags: 0
@@ -7300,7 +7325,8 @@ MonoBehaviour:
   - {fileID: 1601212736919929695, guid: ba32621f6813516439294cf5978177eb, type: 3}
   HealthObject: 1
   textbox: 0
-  timeToStart: 8
+  timeToStart: 1
+  ninMaxEnemies: {x: 5, y: 25}
 --- !u!4 &1931288293
 Transform:
   m_ObjectHideFlags: 0
@@ -7356,7 +7382,7 @@ RectTransform:
   m_Children:
   - {fileID: 1088643770}
   m_Father: {fileID: 2073491954}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7803,10 +7829,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 504144900}
-  - {fileID: 389676018}
   - {fileID: 1961252820}
   m_Father: {fileID: 931996557}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8468,7 +8493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61cea1427bf51e2498296325e33b2ebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 100
   XP: 0
 --- !u!114 &2129121168
 MonoBehaviour:
@@ -8571,11 +8596,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameLoopScript: {fileID: 0}
   gameObjects:
-  - {fileID: 1388140983376149001, guid: f0941d0322cb260438ea2a8bcb86d51b, type: 3}
+  - {fileID: 331608194853343833, guid: 7a6ce79b703927a4a94ba858b2a924a8, type: 3}
   - {fileID: 4288476881620695900, guid: 1fa3fa8512673cf4d87a48fdfd2e446e, type: 3}
   HealthObject: 0
   textbox: 0
-  timeToStart: 8
+  timeToStart: 1
+  ninMaxEnemies: {x: 3, y: 8}
 --- !u!4 &2142658768
 Transform:
   m_ObjectHideFlags: 0
