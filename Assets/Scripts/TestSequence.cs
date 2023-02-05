@@ -7,6 +7,7 @@ public class TestSequence : MonoBehaviour, Isequence
     public GameLoopScript GameLoopScript = GameLoopScript.Instance;
     public List<GameObject> gameObjects;
     public bool HealthObject,textbox;
+    public float timeToStart;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,7 @@ public class TestSequence : MonoBehaviour, Isequence
     }
     private void OnEnable()
     {
-        Invoke("firstLevel", 0.8f);
+        Invoke("firstLevel", timeToStart);
     }
     // Update is called once per frame
     void Update()
@@ -25,15 +26,23 @@ public class TestSequence : MonoBehaviour, Isequence
     {
         if (textbox == false)
         {
-            var obj = Instantiate(gameObjects[0], new Vector3(3, 1, 0), Quaternion.identity);
+            var x = Random.Range(-3, 3);
+            var y = Random.Range(-3, 3);
+            var obj = Instantiate(gameObjects[0], new Vector3(x, y, 0), Quaternion.identity);
             obj.SetActive(true);
-            var obj1 = Instantiate(gameObjects[0], new Vector3(2, 1.5f, 0), Quaternion.identity);
+             x = Random.Range(-3, 3);
+             y = Random.Range(-3, 3);
+            var obj1 = Instantiate(gameObjects[0], new Vector3(x, y, 0), Quaternion.identity);
             obj1.SetActive(true);
-            var obj2 = Instantiate(gameObjects[0], new Vector3(3.5f, 0.1f, 0), Quaternion.identity);
+             x = Random.Range(-3, 3);
+             y = Random.Range(-3, 3);
+            var obj2 = Instantiate(gameObjects[0], new Vector3(x, y, 0), Quaternion.identity);
             obj2.SetActive(true);
             if (HealthObject)
             {
-                var obj3 = Instantiate(gameObjects[1], new Vector3(2.5f, 0.1f, 0), Quaternion.identity);
+                 x = Random.Range(-3, 3);
+                 y = Random.Range(-3, 3);
+                var obj3 = Instantiate(gameObjects[1], new Vector3(x, y, 0), Quaternion.identity);
                 obj3.SetActive(true);
             }
         }

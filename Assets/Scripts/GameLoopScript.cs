@@ -70,6 +70,14 @@ public class GameLoopScript : MonoBehaviour
         }
 
     }
+    public void DisableDoorSequence()
+    {
+        Sequences[sequenceNr ].gameObject.SetActive(false);
+    }
+    public void SetSequence(int _sequenceNr)
+    {
+        sequenceNr = _sequenceNr -1;
+    }
     private void SetSequenceActive()
     {
         Sequences[sequenceNr].gameObject.SetActive(true);
